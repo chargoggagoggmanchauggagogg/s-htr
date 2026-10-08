@@ -1,0 +1,41 @@
+{
+  "name": "infinity",
+  "version": "1.0.0",
+  "description": "Infinity - tasks with a focus lock",
+  "author": "Infinity",
+  "main": "main.js",
+  "scripts": {
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.infinity.focus",
+    "productName": "Infinity",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "lib.js",
+      "index.html",
+      "cover.html",
+      "icon.ico"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.ico",
+      "artifactName": "Infinity.${ext}"
+    }
+  }
+}
